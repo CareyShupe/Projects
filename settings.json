@@ -1,0 +1,273 @@
+{
+   /*
+      This is my selections using Visual Studio Code
+      as a primary editor for Powershell scripts.
+      My Visual Studio Code General Settings.
+   */
+
+   // I prefer my sidebar to the right. My code doesn't move
+   "workbench.sideBar.location": "right",
+   // My preference for me and my profiles.
+   "workbench.settings.applyToAllProfiles": [
+        "workbench.sideBar.location"
+    ],
+   // The gutter view is not for me. It's a waste of space.
+   "editor.minimap.enabled": false,
+   "workbench.iconTheme": "vscode-icons",
+   //Save files after 10 seconds of no typing. Since I use Git a lot I'm not worried about accidentally overwriting stuff
+   "files.autoSave": "afterDelay",
+   "files.autoSaveDelay": 10000,
+   // Always remember unsaved files, I'll explicitly close them if I don't want them
+   "files.hotExit": "onExitAndWindowClose",
+   // Controls how lines should wrap.
+   "editor.wordWrap": "on",
+   // Controls the indentation of wrapped lines.
+   //  - none: No indentation. Wrapped lines begin at column 1.
+   //  - same: Wrapped lines get the same indentation as the parent.
+   //  - indent: Wrapped lines get +1 indentation toward the parent.
+   //  - deepIndent: Wrapped lines get +2 indentation toward the parent.
+   "editor.wrappingIndent": "same",
+    /*
+       Controls whether the editor should automatically adjust the indentation when users type,
+         paste, move or indent lines.
+      - none: The editor will not insert indentation automatically.
+      - keep: The editor will keep the current line's indentation.
+      - brackets: The editor will keep the current line's indentation and honor language defined brackets.
+      - advanced: The editor will keep the current line's indentation, honor language defined brackets and
+         invoke special onEnterRules defined by languages.
+      - full: The editor will keep the current line's indentation, honor language defined brackets,
+         invoke special onEnterRules defined by languages, and honor indentationRules defined by languages.
+    */
+    "editor.autoIndent": "full",
+    // Defines a default formatter which takes precedence over all other formatter settings. Must be the identifier of an extension contributing a formatter.
+    "[powershell]": {
+		"editor.defaultFormatter": "ms-vscode.powershell"
+	},
+    "editor.renderWhitespace": "all",
+    "editor.renderControlCharacters": true,
+    "files.trimTrailingWhitespace": true,
+    "files.encoding": "utf8bom",
+    "files.autoGuessEncoding": true,
+    //I use insiders and don't want to break stuff mid-work
+    "update.enableWindowsBackgroundUpdates": false,
+    //Follow the OS theme default. I prefer dark theme
+    "window.autoDetectColorScheme": false,
+   // Render vertical rulers after a certain number of monospace characters. Company standard file width
+   "editor.rulers": [
+        120
+   ],
+   // Zoom the font of the editor when using mouse wheel and holding `Ctrl`. I notice this option at work on Excede.
+   "editor.mouseWheelZoom": true,
+   // When enabled, the notifications for extension recommendations will not be shown.
+   "extensions.ignoreRecommendations": true,
+   // Enable that the selection with the mouse and keys is doing column selection.
+   "editor.columnSelection": false,
+   // Nice and clean when VS Code starts up.
+   "workbench.startupEditor": "newUntitledFile",
+   "window.newWindowDimensions": "maximized",
+   //Hammers my system if I left a bunch of stuff open before. I'll open what i want
+   "window.restoreWindows": "none",
+   //I want Powershell Intellisense first
+   "editor.snippetSuggestions": "bottom",
+   // Controls whether an active snippet prevents quick suggestions.
+   "editor.suggest.snippetsPreventQuickSuggestions": false,
+   //Easier for me to distinguish between multiple windows
+   "window.title": "${dirty}${remoteName}${separator}${rootName}${separator}${activeEditorShort}${separator}${appName}",
+   "window.titleSeparator": " | ",
+   // CaskaydiaCove NF is Cascadia Code with fancy Nerd Font symbols and ligatures
+   "editor.fontFamily": "CaskaydiaCove NF, Cascadia Code, Consolas NF, Inconsolata NF, Consolas, Courier New, monospace",
+   "debug.console.fontFamily": "CaskaydiaCove NF, Consolas NF, Inconsolata NF, Consolas, Courier New, monospace",
+   // Configures font ligatures or font features.
+   "editor.fontLigatures": true,
+   // Controls the font size in pixels.
+   "editor.fontSize": 16,
+   "editor.wordBasedSuggestions": "currentDocument",
+   // Characters that will be used as word separators when doing word related navigations or operations.
+   "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?",
+   "editor.accessibilitySupport": "off",
+   "editor.autoClosingQuotes": "languageDefined",
+   "editor.bracketPairColorization.enabled": true,
+   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+   "editor.cursorBlinking": "phase",
+   "editor.detectIndentation": true,
+   "editor.foldingImportsByDefault": true,
+   // Controls the font weight. Accepts "normal" and "bold" keywords or numbers between 1 and 1000.
+   "editor.fontWeight": "300",
+   // Controls whether the editor should automatically format the pasted content.
+   "editor.formatOnPaste": true,
+   // Format a file on save. A formatter must be available, the file must not be saved after delay, and the editor must not be shutting down.
+   "editor.formatOnSave": true,
+   // Controls whether the editor should automatically format the line after typing.
+   "editor.formatOnType": true,
+   // Controls if format on save formats the whole file or only modifications. Only applies when `editor.formatOnSave` is enabled.
+   //  - file: Format the whole file.
+   //  - modifications: Format modifications (requires source control).
+   //  - modificationsIfAvailable: Will attempt to format modifications only (requires source control). If source control can't be used, then the whole file will be formatted.
+   "editor.formatOnSaveMode": "modifications",
+   "editor.guides.highlightActiveBracketPair": true,
+   "editor.guides.bracketPairs": "active",
+   "editor.guides.bracketPairsHorizontal": true,
+   "editor.guides.highlightActiveIndentation": true,
+   "editor.guides.indentation": true,
+   "editor.inlayHints.enabled": "offUnlessPressed",
+   "editor.inlayHints.fontSize": 12,
+   "editor.inlineSuggest.enabled": true,
+   "editor.lineHeight": 1.2,
+   "editor.insertSpaces": false,
+   "editor.quickSuggestions": {
+    "comments": "on",
+    "other": "on",
+    "strings": "on"
+  },
+   "editor.renderLineHighlight": "none",
+   "editor.semanticTokenColorCustomizations": {
+   "[Default Dark+]": {
+      "enabled": true,
+      "rules": {
+         "punctuation.section.bracket.end.powershell": "#569CD6"
+      }
+   }
+},
+   "editor.showFoldingControls": "always",
+   "editor.stickyTabStops": true,
+   "editor.suggest.localityBonus": true,
+   "editor.suggest.preview": true,
+   "editor.suggest.showStatusBar": true,
+   "editor.suggestSelection": "recentlyUsedByPrefix",
+   "editor.tabSize": 2,
+   "editor.tokenColorCustomizations": {
+      "[Default Dark+ Experimental]": {
+       "textMateRules": [
+         {
+            "scope": [
+               "meta.attribute.powershell"
+            ],
+            "settings": {
+               "foreground": "#9CDCFE"
+            }
+         },
+         {
+            "scope": [
+               "variable.other.member"
+            ],
+            "settings": {
+               "foreground": "#DCDCAA"
+            }
+         },
+         {
+            "scope": [
+               "support.function.attribute.powershell",
+               "storage.type.powershell",
+               "variable.parameter.powershell"
+            ],
+            "settings": {
+               "foreground": "#4ec9b0ff"
+            }
+         },
+         {
+            "scope": [
+               "meta.hashtable.assignment.powershell"
+            ],
+            "settings": {
+               "foreground": "#D4D4D4"
+            }
+         },
+         {
+            "scope": [
+               "support.constant.variable.powershell",
+               "support.constant.automatic.powershell",
+               "keyword.control.using.powershell"
+            ],
+            "settings": {
+               "foreground": "#569cd6"
+            }
+         },
+         {
+            "scope": [
+               "punctuation.section.bracket.begin.powershell",
+               "punctuation.section.bracket.end.powershell"
+            ],
+            "settings": {
+               "foreground": "#569CD6"
+            }
+         }
+      ]
+   }
+},
+   "editor.useTabStops": true,
+   "editor.wordWrapColumn": 120,
+   "errorLens.enabled": true,
+   "errorLens.enabledDiagnosticLevels": [
+      "warning", "info", "error"
+],
+   "errorLens.gutterIconSet": "borderless",
+   "explorer.copyRelativePathSeparator": "/",
+   "explorer.fileNesting.enabled": true,
+   "explorer.fileNesting.patterns": {
+      "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+      "*.jsx": "${capture}.js",
+      "*.ps1": "${capture}.tests.ps1",
+      "*.psm1": "${capture}.tests.ps1, ${capture}.psd1",
+      "*.ts": "${basename}.spec.${extname}, ${capture}.js, ${basename}.test.${extname}",
+      "*.tsx": "${capture}.ts",
+      "package.json": "package-lock.json, .npmrc, yarn.lock, .yarnrc, pnpm-lock.yaml",
+      "tsconfig.json": "tsconfig.*.json"
+   },
+   "files.associations": {
+      ".denoflare": "jsonc",
+      "*.json": "jsonc"
+   },
+
+   /*
+      Powershell Settings
+   */
+
+   "terminal.integrated.profiles.windows": {
+		"PowerShell": {
+			"source": "PowerShell",
+         "icon": "terminal-powershell",
+         "args": []
+		},
+		"Command Prompt": {
+			"path": ["${env:windir}\\System32\\cmd.exe"],
+			"args": [],
+			"icon": "terminal-cmd"
+		},
+		"Git Bash": {
+			"path": ["C:\\Program Files\\Git\\bin\\Bash.exe"],
+         "icon": "terminal-bash"
+		}
+	},
+   "terminal.integrated.defaultProfile.windows": "Git Bash",
+   "powershell.codeFormatting.useCorrectCasing": true,
+   "powershell.codeFormatting.autoCorrectAliases": true,
+   "window.zoomLevel": 0,
+   //Powershell is the default with "new Item"
+   "files.defaultLanguage": "powershell",
+   "powershell.startAutomatically": true,
+   "powershell.scriptAnalysis.enable": true,
+   "powershell.scriptAnalysis.settingsPath": "PSScriptAnalyzerSettings.psd1",
+   "powershell.enableProfileLoading":false,
+   "editor.language.brackets": [
+         ["{", "}"],
+         ["(", ")"],
+         ["#region", "#endregion"]
+   ],
+   "powershell.powerShellAdditionalExePaths": {
+        "PS7": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+        "PS5.1": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+    },
+   "powershell.powerShellDefaultVersion": "PS7",
+   "powershell.codeFormatting.preset":"Stroustrup",
+   "powershell.integratedConsole.showOnStartup": false,
+   "powershell.integratedConsole.focusConsoleOnExecute": true,
+   "powershell.pester.codeLens": false,
+   "powershell.codeFormatting.newLineAfterOpenBrace": false,
+   "powershell.codeFormatting.whitespaceBeforeOpenParen": true,
+   "powershell.codeFormatting.ignoreOneLineBlock": true,
+   "powershell.codeFormatting.newLineAfterCloseBrace": true,
+   "powershell.codeFormatting.alignPropertyValuePairs": true,
+   "powershell.codeFormatting.whitespaceAfterSeparator": true,
+   "powershell.codeFormatting.whitespaceAroundOperator": true,
+   "powershell.codeFormatting.openBraceOnSameLine": false,
+}
