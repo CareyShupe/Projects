@@ -7,6 +7,12 @@
 
    // I prefer my sidebar to the right. My code doesn't move
    "workbench.sideBar.location": "right",
+   // Controls the location of the Activity Bar relative to the Primary and Secondary Side Bars.
+   //  - default: Show the Activity Bar on the side of the Primary Side Bar and on top of the Secondary Side Bar.
+   //  - top: Show the Activity Bar on top of the Primary and Secondary Side Bars.
+   //  - bottom: Show the Activity Bar at the bottom of the Primary and Secondary Side Bars.
+   //  - hidden: Hide the Activity Bar in the Primary and Secondary Side Bars.
+   "workbench.activityBar.location": "top",
    // My preference for me and my profiles.
    "workbench.settings.applyToAllProfiles": [
         "workbench.sideBar.location"
@@ -226,7 +232,9 @@
 		"PowerShell": {
 			"source": "PowerShell",
          "icon": "terminal-powershell",
-         "args": []
+         "args": [
+            "-NoLogo"
+         ]
 		},
 		"Command Prompt": {
 			"path": ["${env:windir}\\System32\\cmd.exe"],
@@ -270,4 +278,12 @@
    "powershell.codeFormatting.whitespaceAfterSeparator": true,
    "powershell.codeFormatting.whitespaceAroundOperator": true,
    "powershell.codeFormatting.openBraceOnSameLine": false,
+"git.openRepositoryInParentFolders": "always",
+"git.enableSmartCommit": true,
+"git.autofetch": true,
+// Terminal Settings
+// Enables experimental terminal Intellisense suggestions for supported shells (PowerShell) when `terminal.integrated.shellIntegration.enabled` is set to `true`.
+//
+// If shell integration is installed manually, `VSCODE_SUGGEST` needs to be set to `1` before calling the shell integration script.
+"terminal.integrated.suggest.enabled": true
 }
