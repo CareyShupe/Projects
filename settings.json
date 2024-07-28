@@ -282,7 +282,7 @@
 "git.enableSmartCommit": true,
 "git.autofetch": true,
 // Terminal Settings
-// Enables experimental terminal Intellisense suggestions for supported shells (PowerShell) when `terminal.integrated.shellIntegration.enabled` is set to `true`.
+// Enables experimgit add .ental terminal Intellisense suggestions for supported shells (PowerShell) when `terminal.integrated.shellIntegration.enabled` is set to `true`.
 //
 // If shell integration is installed manually, `VSCODE_SUGGEST` needs to be set to `1` before calling the shell integration script.
 "terminal.integrated.suggest.enabled": true
