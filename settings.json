@@ -228,27 +228,6 @@
       Powershell Settings
    */
 
-   "terminal.integrated.profiles.windows": {
-		"PowerShell": {
-			"source": "PowerShell",
-         "icon": "terminal-powershell",
-         "args": [
-            "-NoLogo"
-         ]
-		},
-		"Command Prompt": {
-			"path": ["${env:windir}\\System32\\cmd.exe"],
-			"args": [],
-			"icon": "terminal-cmd"
-		},
-		"Git Bash": {
-			"path": ["C:\\Program Files\\Git\\bin\\Bash.exe"],
-         "icon": "terminal-bash"
-		}
-	},
-   "terminal.integrated.defaultProfile.windows": "Git Bash",
-   "powershell.codeFormatting.useCorrectCasing": true,
-   "powershell.codeFormatting.autoCorrectAliases": true,
    "window.zoomLevel": 0,
    //Powershell is the default with "new Item"
    "files.defaultLanguage": "powershell",
@@ -265,24 +244,70 @@
         "PS7": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
         "PS5.1": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
     },
+   "peacock.showColorInStatusBar": false,
    "powershell.powerShellDefaultVersion": "PS7",
-   "powershell.codeFormatting.preset":"Stroustrup",
-   "powershell.integratedConsole.showOnStartup": false,
-   "powershell.integratedConsole.focusConsoleOnExecute": true,
-   "powershell.pester.codeLens": false,
-   "powershell.codeFormatting.newLineAfterOpenBrace": false,
-   "powershell.codeFormatting.whitespaceBeforeOpenParen": true,
-   "powershell.codeFormatting.ignoreOneLineBlock": true,
-   "powershell.codeFormatting.newLineAfterCloseBrace": true,
+   "powershell.codeFormatting.preset": "Stroustrup",
+   "powershell.buttons.showRunButtons": false,
    "powershell.codeFormatting.alignPropertyValuePairs": true,
-   "powershell.codeFormatting.whitespaceAfterSeparator": true,
-   "powershell.codeFormatting.whitespaceAroundOperator": true,
-   "powershell.codeFormatting.openBraceOnSameLine": false,
+   "powershell.codeFormatting.autoCorrectAliases": true,
+   "powershell.codeFormatting.newLineAfterOpenBrace": true,
+   "powershell.codeFormatting.openBraceOnSameLine": true,
+   "powershell.codeFormatting.pipelineIndentationStyle": "IncreaseIndentationForFirstPipeline",
+   "powershell.codeFormatting.trimWhitespaceAroundPipe": true,
+   "powershell.codeFormatting.useConstantStrings": true,
+   "powershell.codeFormatting.useCorrectCasing": true,
+   "powershell.codeFormatting.whitespaceBetweenParameters": true,
+   "powershell.integratedConsole.showOnStartup": true,
+   "powershell.integratedConsole.focusConsoleOnExecute": true,
+   "powershell.integratedConsole.suppressStartupBanner": true,
+   "powershell.pester.codeLens": true,
+   "powershell.pester.debugOutputVerbosity": "Detailed",
+   "powershell.pester.useLegacyCodeLens": false,
+   "powershell.promptToUpdatePowerShell": false,
+   "powershell.sideBar.CommandExplorerVisibility": false,
+   "powershell.startAsLoginShell.linux": true,
+   "prettier.requireConfig": true,
+   "screencastMode.onlyKeyboardShortcuts": true,
+   "security.workspace.trust.banner": "never",
+   "security.workspace.trust.enabled": false,
+   "security.workspace.trust.startupPrompt": "never",
+   "security.workspace.trust.untrustedFiles": "open",
+   "settingsSync.ignoredExtensions": [],
+   "settingsSync.ignoredSettings": [
+      "extensions.autoCheckUpdates",
+      "powershell.powerShellDefaultVersion",
+      // This is deprecated, use `#terminal.integrated.defaultProfile.windows#` instead
+      //"terminal.integrated.shell.windows"
+      "terminal.integrated.defaultProfile.windows"
+   ],
 
    /*
       Terminal Settings
    */
 
+   "terminal.integrated.profiles.windows": {
+      "PowerShell": {
+         "source": "PowerShell",
+         "icon": "terminal-powershell",
+         "args": [
+            "-NoLogo"
+         ]
+      },
+      "Command Prompt": {
+         "path": [
+            "${env:windir}\\System32\\cmd.exe"
+         ],
+         "args": [],
+         "icon": "terminal-cmd"
+      },
+      "Git Bash": {
+         "path": [
+            "C:\\Program Files\\Git\\bin\\Bash.exe"
+         ],
+         "icon": "terminal-bash"
+      }
+   },
+   "terminal.integrated.defaultProfile.windows": "Git Bash",
    // Enables experimgit add .ental terminal Intellisense suggestions for supported shells (PowerShell) when `terminal.integrated.shellIntegration.enabled` is set to `true`.
    //
    // If shell integration is installed manually, `VSCODE_SUGGEST` needs to be set to `1` before calling the shell integration script.
@@ -291,6 +316,7 @@
     /*
       Git and GitHub Settings
    */
+
    "git.openRepositoryInParentFolders": "always",
    "git-graph.repository.commits.fetchAvatars": true,
    "git-graph.repository.fetchAndPrune": true,
