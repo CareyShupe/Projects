@@ -278,12 +278,238 @@
    "powershell.codeFormatting.whitespaceAfterSeparator": true,
    "powershell.codeFormatting.whitespaceAroundOperator": true,
    "powershell.codeFormatting.openBraceOnSameLine": false,
-"git.openRepositoryInParentFolders": "always",
-"git.enableSmartCommit": true,
-"git.autofetch": true,
-// Terminal Settings
-// Enables experimgit add .ental terminal Intellisense suggestions for supported shells (PowerShell) when `terminal.integrated.shellIntegration.enabled` is set to `true`.
-//
-// If shell integration is installed manually, `VSCODE_SUGGEST` needs to be set to `1` before calling the shell integration script.
-"terminal.integrated.suggest.enabled": true
+
+   /*
+      Terminal Settings
+   */
+
+   // Enables experimgit add .ental terminal Intellisense suggestions for supported shells (PowerShell) when `terminal.integrated.shellIntegration.enabled` is set to `true`.
+   //
+   // If shell integration is installed manually, `VSCODE_SUGGEST` needs to be set to `1` before calling the shell integration script.
+   "terminal.integrated.suggest.enabled": true,
+
+    /*
+      Git and GitHub Settings
+   */
+   "git.openRepositoryInParentFolders": "always",
+   "git-graph.repository.commits.fetchAvatars": true,
+   "git-graph.repository.fetchAndPrune": true,
+   "git.autofetch": true,
+   "git.autoStash": true,
+   "git.branchPrefix": "feature/",
+   "git.branchRandomName.enable": true,
+   "git.confirmEmptyCommits": false,
+   "git.confirmSync": false,
+   "git.enableSmartCommit": true,
+   "git.ignoreMissingGitWarning": true,
+   "git.inputValidationSubjectLength": 72,
+   "git.openAfterClone": "whenNoFolderOpen",
+   "git.postCommitCommand": "push",
+   "git.promptToSaveFilesBeforeCommit": "staged",
+   "git.pruneOnFetch": true,
+   "git.rebaseWhenSync": true,
+   "git.useCommitInputAsStashMessage": true,
+   "github-actions.org-features": true,
+   "github-actions.workflows.pinned.refresh.enabled": true,
+   "github-actions.workflows.pinned.refresh.interval": 2,
+   "github.copilot.enable": {
+      "*": true,
+      "yaml": true,
+      "plaintext": false,
+      "markdown": false,
+      "scminput": false,
+      "hcl": false
+   },
+   "githubIssues.queries": [
+      {
+         "label": "My Issues",
+         "query": "default"
+      },
+      {
+         "label": "My Created Issues",
+         "query": "author:${user} state:open repo:${owner}/${repository} sort:created-desc"
+      },
+      {
+         "label": "All Open",
+         "query": "state:open repo:${owner}/${repository} sort:created-desc"
+      }
+   ],
+   "githubPullRequests.createOnPublishBranch": "never",
+   "githubPullRequests.defaultMergeMethod": "squash",
+   "githubPullRequests.pushBranch": "always",
+   "githubPullRequests.assignCreated": "${user}",
+   "githubPullRequests.defaultDeletionMethod.selectLocalBranch": true,
+   "githubPullRequests.defaultDeletionMethod.selectRemote": true,
+   "githubPullRequests.notifications": "pullRequests",
+   "githubPullRequests.terminalLinksHandler": "vscode",
+   "gitlens.codeLens.enabled": false,
+   "gitlens.menus": {
+      "editor": false,
+      "editorGroup": false,
+      "editorTab": false,
+      "explorer": {
+         "clipboard": true,
+         "compare": true,
+         "history": true,
+         "remote": true
+      },
+      "scm": {
+         "authors": true
+      },
+      "scmGroup": {
+         "compare": true,
+         "openClose": true,
+         "stash": true
+      },
+      "scmGroupInline": {
+         "stash": true
+      },
+      "scmItem": {
+         "clipboard": true,
+         "compare": true,
+         "history": true,
+         "remote": false,
+         "stash": true
+      }
+   },
+   "gitmoji.additionalEmojis": [
+      {
+         "description": "Add a new feature                                       [minor]",
+         "code": "feat: ",
+         "emoji": "✨"
+      },
+      {
+         "description": "Fix a bug                                                      [patch]",
+         "code": "fix: ",
+         "emoji": "🐛"
+      },
+      {
+         "description": "Fix or patch a non-critical issue                   [patch]",
+         "code": "patch: ",
+         "emoji": "🩹"
+      },
+      {
+         "description": "Add or Update Tests",
+         "code": "test: ",
+         "emoji": "🧪"
+      },
+      {
+         "description": "Update documentation",
+         "code": "docs: ",
+         "emoji": "📝"
+      },
+      {
+         "description": " Update comments or TODO",
+         "code": "comments: ",
+         "emoji": "💡"
+      },
+      {
+         "description": " Fix compiler / linter warnings",
+         "code": "lint: ",
+         "emoji": "🚨"
+      },
+      {
+         "description": "Improve performance                                  [patch]",
+         "code": "perf: ",
+         "emoji": "⚡"
+      },
+      {
+         "description": "Refactor code                                               [patch]",
+         "code": "refactor: ",
+         "emoji": "♻️"
+      },
+      {
+         "description": "Restyle or improve structure/format",
+         "code": "style: ",
+         "emoji": "🎨"
+      },
+      {
+         "description": "Fix typo                                                        [patch]",
+         "code": "typo: ",
+         "emoji": "✏️"
+      },
+      {
+         "description": "Revert Changes                                           [patch]",
+         "code": "revert: ",
+         "emoji": "⏪"
+      },
+      {
+         "description": " Resolve Security Issue                                 [patch]",
+         "code": "security: ",
+         "emoji": "🔒"
+      },
+      {
+         "description": "Update the build system",
+         "code": "build: ",
+         "emoji": "📦"
+      },
+      {
+         "description": " Update the continuous integration",
+         "code": "ci: ",
+         "emoji": "👷"
+      },
+      {
+         "description": "Release, Deploy, or Publish Project",
+         "code": "release: ",
+         "emoji": "🚀"
+      },
+      {
+         "description": "Change configuration file(s)                        [patch]",
+         "code": "config: ",
+         "emoji": "⚙️"
+      },
+      {
+         "description": "Update Dependency                                   [patch]",
+         "code": "chore(deps): ",
+         "emoji": "🔗"
+      },
+      {
+         "description": "Bump Dependency Version                         [patch]",
+         "code": "chore(depbump): ",
+         "emoji": "⬆️"
+      },
+      {
+         "description": "Pin Dependency to specific version            [patch]",
+         "code": "chore(dep-pin): ",
+         "emoji": "📌"
+      },
+      {
+         "description": "Add Dependency                                        [patch]",
+         "code": "chore(depadd): ",
+         "emoji": "➕"
+      },
+      {
+         "description": "Remove Dependency                                  [patch]",
+         "code": "chore(depremove): ",
+         "emoji": "➖"
+      },
+      {
+         "description": "Miscellaneous Chore",
+         "code": "chore: ",
+         "emoji": "🔧"
+      },
+      {
+         "description": "Deprecate or comment out old code         [patch]",
+         "code": "deprecate: ",
+         "emoji": "🗑️"
+      },
+      {
+         "description": " Remove or delete code/features                [patch]",
+         "code": "remove: ",
+         "emoji": "🔥"
+      },
+      {
+         "description": "Critical Hotfix                                              [patch]",
+         "code": "hotfix: ",
+         "emoji": "🚑"
+      },
+      {
+         "description": "BREAKING CHANGE                                    [MAJOR]",
+         "code": "BREAKING CHANGE: ",
+         "emoji": "💥"
+      }
+   ],
+   "gitmoji.onlyUseAdditionalEmojis": true,
+   "hediet.vscode-drawio.codeLinkActivated": true,
+
 }
