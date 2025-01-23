@@ -1,4 +1,0 @@
-Hello GitHub Community!
-I have started learning to program since MS DOS Basic. From books I self taught myself, and struggle with errors, dial-up and bulletin board for answers.
-I took Community College programming classes at the time in C, Pascal, Cobol and RPG I think that what it was called while working as a diesel tech.
-I would like to hear you all. I will finish a script and post it on this repository.
