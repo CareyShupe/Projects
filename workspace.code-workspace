@@ -2,6 +2,10 @@
 	"folders": [
 		{
 			"path": "VS Code Setting"
+		},
+		{
+			"name": "Projects-1",
+			"path": "../../Projects-1"
 		}
 	]
 }
