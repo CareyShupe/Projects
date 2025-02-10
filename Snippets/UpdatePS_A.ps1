@@ -14,8 +14,10 @@ function Get-PowerShellUpdate {
     }
 
     if ($currentVersion -eq $latestVersion) {
+        Write-Output "Your PowerShell version ($currentVersion) is up to date."
         return $true
     } else {
+        Write-Output "A new version of PowerShell ($latestVersion) is available. Your current version is $currentVersion."
         return $false
     }
 }
