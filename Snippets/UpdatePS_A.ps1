@@ -21,7 +21,8 @@ function Get-PowerShellUpdate {
 }
 
 # Check if PowerShell is up to date
-if (Get-PowerShellUpdate) {
+if (Get-PowerShellgit status
+Update) {
     Write-Output 'PowerShell is up to date...'
 } else {
     Write-Output 'A new version of PowerShell is available.'
