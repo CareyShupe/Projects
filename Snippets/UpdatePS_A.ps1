@@ -3,20 +3,26 @@ $gitHubApiUrl = 'https://api.github.com/repos/PowerShell/PowerShell/releases/lat
 
 # Function to check for PowerShell updates
 function Get-PowerShellUpdate {
-	Write-Host 'Checking for PowerShell updates...' -ForegroundColor Cyan
-	$currentVersion = $PSVersionTable.PSVersion
-	$latestVersion = [System.Version]((Invoke-RestMethod -Uri $gitHubApiUrl).tag_name.TrimStart('v'))
+    Write-Output 'Checking for PowerShell updates...' -ForegroundColor Cyan
+    $currentVersion = $PSVersionTable.PSVersion
 
-	if ($currentVersion -eq $latestVersion) {
-		return $true
-	} else {
-		return $false
-	}
+    try {
+        $latestVersion = [System.Version]((Invoke-RestMethod -Uri $gitHubApiUrl).tag_name.TrimStart('v'))
+    } catch {
+        Write-Output 'Failed to retrieve the latest version information.' -ForegroundColor Red
+        return $false
+    }
+
+    if ($currentVersion -eq $latestVersion) {
+        return $true
+    } else {
+        return $false
+    }
 }
 
 # Check if PowerShell is up to date
 if (Get-PowerShellUpdate) {
-	Write-Host 'Your PowerShell is up to date...'
+    Write-Output 'PowerShell is up to date...'
 } else {
-	Write-Host 'A new version of PowerShell is available.'
+    Write-Output 'A new version of PowerShell is available.'
 }
