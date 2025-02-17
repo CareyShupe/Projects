@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "VS Code Setting"
+		},
+		{
+			"path": "My_Powershell_Profile"
 		}
 	]
 }
